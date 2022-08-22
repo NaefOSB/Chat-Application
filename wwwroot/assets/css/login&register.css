@@ -1,0 +1,380 @@
+body {
+  margin: 0;
+  background-color: #cedaff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  height: 80vh;
+  background-color: #fff;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.first_page {
+  z-index: 10;
+}
+.first_page .top-img img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.first_page .main-img {
+  perspective: 900px;
+}
+.first_page .main-img img {
+  width: 215px;
+  height: 200px;
+  margin-top: 100px;
+}
+.first_page .bottom-img img {
+  width: 80px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.first_page .content {
+  z-index: 10;
+}
+.first_page .content .page_content div button {
+  width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+.first_page .content .page_content div:nth-child(1) button {
+  background-color: #03a9f4;
+  color: #fff;
+}
+.first_page .content .page_content div:nth-child(1) button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.first_page .content .page_content div:nth-child(2) button {
+  background-color: #d3f1fc;
+  color: #000;
+}
+.first_page .content .page_content div:nth-child(2) button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sign_in .top-img img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sign_in .main-img img {
+  padding-top: 50px;
+  width: 200px;
+  height: 150px;
+}
+.sign_in .bottom-img img {
+  width: 130px;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.sign_in form {
+  z-index: 100;
+}
+.sign_in .content .page_content div {
+  position: relative;
+}
+.sign_in .content .page_content div input, .sign_in .content .page_content div button {
+  text-align: right;
+  width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px;
+  border: none;
+  font-weight: bold;
+}
+.sign_in .content .page_content div input {
+  background-color: #d3f1fc;
+  padding-right: 55px;
+}
+.sign_in .content .page_content div input:focus {
+  border: #03a9f4 1px solid;
+  outline: none !important;
+  color: #03a9f4;
+}
+.sign_in .content .page_content div button {
+  z-index: 100;
+  text-align: center;
+  border: none;
+  width: 230px;
+  background-color: #03a9f4;
+  color: #fff;
+}
+.sign_in .content .page_content div button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.sign_in .content .page_content div button:active {
+  border: none;
+}
+.sign_in .content .page_content div i {
+  position: absolute;
+  color: #03a9f4;
+}
+.sign_in .content .page_content div .phone {
+  right: 40px;
+  bottom: 25px;
+}
+.sign_in .content .page_content div .lock {
+  right: 40px;
+  bottom: 25px;
+}
+.sign_in .content .page_content div .eye {
+  right: 240px;
+  bottom: 25px;
+}
+.sign_in .content .page_content div .eye:hover {
+  color: #000;
+  cursor: pointer;
+}
+.sign_in .content .page_content div:nth-child(1) button {
+  background-color: #03a9f4;
+  color: #fff;
+}
+.sign_in .content .page_content div:nth-child(1) button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.sign_in .content .page_content div:nth-child(2) button {
+  background-color: #d3f1fc;
+  color: #000;
+}
+.sign_in .content .page_content div:nth-child(2) button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.register {
+  opacity: 0;
+  z-index: -1;
+  overflow: inherit;
+  overflow-x: hidden;
+}
+.register::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+.register::-webkit-scrollbar-thumb {
+  background: #9addfa;
+  border-radius: 10px;
+}
+.register .top-img {
+  margin-top: 50px;
+}
+.register .top-img img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.register .main-img img {
+  width: 170px;
+  height: 200px;
+}
+.register .bottom-img img {
+  width: 80px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+}
+.register form {
+  z-index: 100;
+}
+.register .content .page_content div {
+  z-index: 100;
+  position: relative;
+}
+.register .content .page_content div input, .register .content .page_content div button {
+  text-align: right;
+  width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px;
+  border: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+.register .content .page_content div input {
+  background-color: #d3f1fc;
+  padding-right: 55px;
+}
+.register .content .page_content div input:focus {
+  border: #03a9f4 1px solid;
+  outline: none !important;
+  color: #03a9f4;
+}
+.register .content .page_content div button {
+  z-index: 100;
+  text-align: center;
+  border: none;
+  width: 230px;
+  background-color: #03a9f4;
+  color: #fff;
+}
+.register .content .page_content div button:hover {
+  background-color: #9addfa;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.register .content .page_content div button:active {
+  border: none;
+}
+.register .content .page_content div i {
+  position: absolute;
+  color: #03a9f4;
+}
+.register .content .page_content div .phone {
+  right: 25px;
+  bottom: 25px;
+}
+.register .content .page_content div .lock {
+  right: 25px;
+  bottom: 128px;
+}
+.register .content .page_content div .eye {
+  left: 25px;
+  bottom: 128px;
+}
+.register .content .page_content div .eye:hover {
+  color: #000;
+  cursor: pointer;
+}
+.register .content .page_content div .location {
+  right: 25px;
+  bottom: 25px;
+}
+
+div.selection_branch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding: 0;
+  border-radius: 20px;
+  background-color: #d3f1fc;
+  justify-content: center;
+  z-index: 100;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+div.selection_branch:hover {
+  cursor: pointer;
+  background-color: #9addfa;
+}
+div.selection_branch .arrow {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+div.selection_branch .building {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+}
+div.selection_branch .branch {
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px;
+  border: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: absolute !important;
+  opacity: 0;
+  z-index: 0 !important;
+}
+div.selection_branch .branch div {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+}
+div.selection_branch .branch div input {
+  width: 20px !important;
+}
+div.selection_branch .branch p {
+  margin: 0;
+}
+div.selection_branch .branch-active {
+  position: relative !important;
+  opacity: 1;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=login&register.css.map */

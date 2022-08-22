@@ -1,0 +1,434 @@
+$mainColor: rgb(3,169,244);
+$supColor: rgb(154,221,250);
+$supbutton:rgb(211,241,252);
+$white: #fff;
+$black: #000;
+
+@mixin transition($time) {
+    transition: all $time;
+    -o-transition: all $time;
+    -moz-transition: all $time;
+    -ms-transition: all $time;
+    -webkit-transition: all $time;
+}
+@mixin animation($animation_name, $time, $animation_type, $repeate){
+    animation: $animation_name $time $animation_type $repeate;
+    -o-animation: $animation_name $time $animation_type $repeate;
+    -moz-animation: $animation_name $time $animation_type $repeate;
+    -ms-animation: $animation_name $time $animation_type $repeate;
+    -webkit-animation: $animation_name $time $animation_type $repeate;
+    
+}
+
+@mixin transform-scale($big ){
+    transform: scale($big);
+    -o-transform: scale($big);
+    -moz-transform: scale($big);
+    -webkit-transform: scale($big);
+    -ms-transform: scale($big);
+}
+
+$backgroundCcolor: rgb(206,218,255);
+body{
+    margin: 0;
+    background-color: $backgroundCcolor;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.main{
+    overflow: hidden;
+    border-radius: 1.50rem;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    height: 80vh;
+    background-color: $white;
+    @include transition(0.5s);
+
+}
+
+
+// Start First Page
+.first_page{
+    z-index: 10;
+    .top-img{
+        img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+    }
+    .main-img{
+        perspective: 900px;
+        img{
+            width: 215px;
+            height: 200px;
+            margin-top: 100px;
+        }
+    }
+    .bottom-img{
+        img{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        }
+    }
+    .content{
+        z-index: 10;
+        .page_content{
+            div{
+                button{
+                    width: 200px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    border: none;
+                    margin: 10px;            
+                }
+            }
+            div:nth-child(1){
+                button{
+                    background-color: $mainColor;
+                    color: $white;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                }
+            }
+            div:nth-child(2){
+                button{
+                    background-color: $supbutton;
+                    color: $black;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                }
+            }
+        }
+    }
+}
+// End First Page
+
+// start Login In
+.sign_in{
+    .top-img{
+        img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        }
+    }
+    .main-img{
+        img{
+        padding-top: 50px;
+        width: 200px;
+        height: 150px;
+        }
+    }
+    .bottom-img{
+        img{
+        width: 130px;
+        height: 110px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        }
+    }
+    form{
+        z-index: 100;
+    }
+    .content{
+        .page_content{
+            div{
+                position: relative;
+                input, button{
+                    text-align: right;
+                    width: 200px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    margin: 10px;
+                    border: none;
+                    font-weight: bold;
+                    
+                }
+                input{
+                    background-color: $supbutton;
+                    padding-right: 55px;
+
+                }
+                input:focus {
+                   border: $mainColor 1px solid;
+                   outline: none !important;
+                   color: $mainColor;                
+                }
+                button{
+                    
+                    z-index: 100;
+                    text-align: center;
+                    border: none;
+                    width: 230px;
+                    background-color: $mainColor;
+                    color: $white;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                    &:active{
+                        border: none;
+                    }
+                }
+                i{
+                    position: absolute;
+                    color: $mainColor;
+                }
+                .phone{
+                    right: 40px;
+                    bottom: 25px;
+                }
+                .lock{
+                    right: 40px;
+                    bottom: 25px;
+                }
+                .eye{
+                    right: 240px;
+                    bottom: 25px;
+                    &:hover{
+                        color: $black;
+                        cursor: pointer;
+                    }
+                }  
+            }
+            div:nth-child(1){
+                button{
+                    background-color: $mainColor;
+                    color: $white;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                }
+            }
+            div:nth-child(2){
+                button{
+                    background-color: $supbutton;
+                    color: $black;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Log In
+
+
+// Start Regester
+
+
+.register{
+    opacity: 0;
+    z-index: -1;
+    overflow: inherit;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 10px;
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $supColor;
+        border-radius: 10px;
+      }
+      
+    .top-img{
+        margin-top: 50px;
+        img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+    }
+    .main-img{
+        img{
+        width: 170px;
+        height: 200px;
+        }
+    }
+    .bottom-img{
+        img{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        }
+    }
+    form{
+        z-index: 100;
+    }
+    .content{
+        .page_content{
+            div{
+                z-index: 100;
+                position: relative;
+                input, button{
+                    text-align: right;
+                    width: 200px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    margin: 10px;
+                    border: none;
+                    font-weight: bold;
+                    z-index: 1000;
+                }
+                input{
+
+                    background-color: $supbutton;
+                    padding-right: 55px;
+                &:focus {
+                   border: $mainColor 1px solid;
+                   outline: none !important;
+                   color: $mainColor;                
+                }
+                }
+                
+                
+                button{
+                    z-index: 100;
+                    text-align: center;
+                    border: none;
+                    width: 230px;
+                    background-color: $mainColor;
+                    color: $white;
+                    &:hover{
+                        background-color: $supColor;
+                        cursor: pointer;
+                        color: $black;
+                        @include transition(0.5s);
+                    }
+                    &:active{
+                        border: none;
+                    }
+                }
+                i{
+                    position: absolute;
+                    color: $mainColor;
+                }
+                .phone{
+                    right: 25px;
+                    bottom: 25px;
+                }
+                .lock{
+                    right: 25px;
+                    bottom: 128px;
+                }
+                .eye{
+                    left: 25px;
+                    bottom: 128px;
+                    &:hover{
+                        color: $black;
+                        cursor: pointer;
+                    }
+                }
+                .location{
+                    right: 25px;
+                    bottom: 25px;
+                }  
+            }
+           
+        }
+    }
+}
+
+
+div.selection_branch{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: $supbutton;
+    justify-content: center;
+    z-index: 100;
+
+    @include transition(0.5s);
+    &:hover{
+        cursor: pointer;
+        background-color: $supColor;
+    }
+    .arrow{
+        top: 15px;
+        left: 15px;
+        position: absolute;
+        @include transition(0.5s)
+    }
+    .building{
+        top: 15px;
+        right: 15px;
+        position: absolute;
+    }
+    .branch{
+        text-align: center;
+        padding: 5px;
+        border-radius: 20px;
+        margin: 10px;
+        border: none;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        position: absolute !important;
+        opacity: 0;
+        z-index: 0 !important;
+        div{
+            display: flex;
+            align-self: flex-end;
+            align-items: center;
+            input{
+                width: 20px !important;
+            }
+        }
+        p{
+            margin: 0;
+        }
+
+    }
+    .branch-active{
+        position: relative !important;
+        opacity: 1;
+        z-index: 10;
+
+    }
+}
+// End Regester
+

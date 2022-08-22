@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأمين - تسجيل الدخول</title>
+
+    <!-- =============== Icon tab browser ================= -->
+	<link rel="icon" href="assets/img/AmeenIcon.png">
+    <!-- =============== css Link ================= -->
+	<link rel="stylesheet" href="assets/css/login&register.css">
+    <!-- =============== Fontawsome Link ================= -->
+	<script src="https://kit.fontawesome.com/5cb72d26ec.js" crossorigin="anonymous"></script>
+    
+
+
+</head>
+<body>
+
+    <!-- Start First Page -->
+    <div id="first-page" class="main first_page">
+
+        <div class="top-img">
+            <img src="assets/img/sign_register/main_top.png" />
+        </div>
+
+        <div class="main-img">
+            <img src="assets/img/AmeenIcon.png" />
+        </div>
+
+        <div class="content">
+            <div class="page_content">
+                <div>
+                    <button onclick="showSignIn()">تسجيل الدخول</button>
+                </div>
+                <div>
+                    <button onclick="showRegister()">إنشاء حساب</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="bottom-img">
+             <img src="assets/img/sign_register/main_bottom.png" />
+         </div>
+
+    </div>
+    <!-- End First Page -->
+
+
+    <!-- Start Sign In Page -->
+    <div style="opacity: 0;" id="sign_in" class="main sign_in">
+
+        <div class="top-img">
+            <img src="assets/img/sign_register/main_top.png" />
+        </div>
+            <div class="main-img">
+                <img src="assets/img/sign_register/login-2.png" />
+            </div>
+        <form method="get" action="index">
+            <div class="content">
+                <div class="page_content">
+                    <div>
+                        <i class="phone fa fa-phone-alt"></i>
+                        <input type="text" placeholder="أكتب رقمك" />
+                    </div>
+                    <div>
+                        <i onclick="displayPassword(this)" class="eye fa fa-eye"></i>
+                        <input type="password" placeholder="كلمة المرور" />
+                        <i class="lock fa fa-lock"></i>
+                    </div>
+                    <div>
+                        <button type="submit">تسجيل الدخول</button>
+                    </div>
+                    <div>
+                        <a onclick="showRegister()" href="#">لاتملك حساب؟ إنشاء حساب</a>
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+
+         <div class="bottom-img">
+             <img src="assets/img/sign_register/login_bottom.png" />
+         </div>
+
+    </div>
+    <!-- End Sign In Page  -->
+
+    <!-- Start register page -->
+    <div id="register" class="main register">
+
+        <div class="top-img">
+            <img src="assets/img/sign_register/signup_top.png" />
+        </div>
+            <div class="main-img">
+                <img src="assets/img/sign_register/signUp.png" />
+            </div>
+        <form method="get" action="index">
+            <div class="content">
+                <div class="page_content">
+                    <div>
+                        <i class="phone fa fa-user"></i>
+                        <input type="text" placeholder="الأسم الكامل" />
+                    </div>
+                    <div>
+                        <i class="phone fa fa-phone-alt"></i>
+                        <input type="password" placeholder="رقم الهاتف" />
+                    </div>
+                    <div  class="selection_branch">
+                        <i class="building fa fa-city"></i>
+                     <div onclick="showBranch()">
+                            <p id ="branch-text">إختار فرعك</p>
+                        </div>
+                        
+                        <i id="arrow" class="arrow fa fa-arrow-up"></i>
+                        <div id="branch" class="branch">
+                            <div>
+                                 <label>جدة</label>
+                                <input onclick="selectedBranch(this); showBranch()" type="radio" name="branch" value="جدة" />
+                            </div>
+                            <div>
+                                <label>مكة</label>
+                                <input onclick="selectedBranch(this); showBranch()" type="radio" name="branch"  value="مكة" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <i class="location fa fa-map-marker-alt"></i>
+                        <input type="text" placeholder="العنوان" />
+                    </div>
+                    <div>
+                        <i onclick="displayPassword(this)" class="eye fa fa-eye"></i>
+                        <input id="password-input" type="password" placeholder="كلمة المرور" />
+                        <i class="lock fa fa-lock"></i>
+                    <div>
+                        <button type="submit">إنشاء حساب</button>
+                    </div>
+                    <div style="padding-bottom: 20px;">
+                        <a onclick="showSignIn()" href="#">لديك حساب مسبقا؟ سجل الدخول</a>
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+
+         <div class="bottom-img">
+             <img src="assets/img/sign_register/main_bottom.png" />
+         </div>
+
+    </div>
+    <!-- End register Page  -->
+
+
+
+
+
+
+    <!-- =============== Scripts Link ================= -->
+    <script src="assets/js/login_register.js" async></script>
+</body>
+</html>
